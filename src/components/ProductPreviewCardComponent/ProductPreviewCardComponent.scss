@@ -1,0 +1,101 @@
+.product-review-card-component {
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--space-lg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  max-width: 360px;
+
+  .image-mobile {
+    width: 100%;
+    max-width: 700px;
+    height: 200px;
+  }
+
+  .image-desktop {
+    display: none;
+  }
+
+  .content {
+    padding: var(--space-big-m);
+    font-family: var(--font-montserrat);
+
+    .categorie {
+      padding-bottom: var(--space-md);
+      text-transform: uppercase;
+      color: var(--color-grey);
+      letter-spacing: var(--space-2);
+    }
+
+    .title {
+      font-family: var(--font-fraunces);
+      font-size: var(--size-big-l);
+      font-weight: var(--font-bold);
+      padding-bottom: var(--space-md);
+    }
+
+    .description {
+      padding-bottom: var(--space-md);
+      color: var(--color-grey);
+    }
+
+    .price {
+      font-family: var(--font-fraunces);
+      padding-bottom: var(--space-md);
+      display: flex;
+      gap: var(--space-lg);
+      align-items: center;
+
+      .actual-price {
+        font-size: var(--size-big-l);
+        font-weight: var(--font-bold);
+        color: var(--color-green-500)
+      }
+
+      .old-price {
+        text-decoration: line-through;
+        color: var(--color-grey);
+      }
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-green-500);
+      gap: var(--space-sm);
+      padding: var(--space-md);
+      border-radius: var(--radius-md);
+      color: var(--color-white);
+      cursor: pointer;
+    }
+
+    .btn-icon {
+      width: var(--space-md);
+      height: var(--space-md);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .product-review-card-component {
+    flex-direction: row;
+    max-width: 700px;
+
+    .image-mobile {
+      display: none;
+    }
+
+    .image-desktop {
+      display: block;
+      width: 50%;
+    }
+
+    .content {
+      width: 50%;
+      padding: var(--space-big-xxl);
+    }
+  }
+}

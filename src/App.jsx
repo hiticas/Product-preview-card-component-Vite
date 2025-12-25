@@ -1,9 +1,10 @@
 import './App.scss'
+import ProductPreviewCardComponent from "./components/ProductPreviewCardComponent/ProductPreviewCardComponent"
 
 function App() {
   return (
-    <div className="product-review-card-component">
-      <h1>Product Preview Card Component Vite</h1>
+    <div className="app">
+      <ProductPreviewCardComponent />
     </div>
   )
 }
